@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="Modelo.Calcula" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,10 +14,9 @@
     </head>
     <body>
         <h1>Resultado</h1>
-        <% Calcula calc = ( Calcula ) request.getAttribute("calcula"); %>
-        Op1: <%= calc.getOp1() %> <br>
-        Op2: <%= calc.getOp2() %> <br>
-        Operación: <%= calc.getOperacion() %> <br>
-        Resultado: <%= calc.getResultado() %>
+        Op1: ${calcula.op1} <br>
+        Op2: ${calcula.op2} <br>
+        Operación: ${calcula.operacion} <br>
+        Resultado: ${calcula.resultado}
     </body>
 </html>
